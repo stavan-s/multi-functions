@@ -175,10 +175,10 @@ int main() {
 
         cout<<"----------------------- Functions -----------------------"<<endl;
         cout<<"\nEnter your choice:"<<endl;
-        cout<<"1. Check your number is armstrong or not"<<endl;
-        cout<<"2. Check your number is palindrome or not"<<endl;
-        cout<<"3. Check your string is palindrome or not"<<endl;
-        cout<<"4. Check your number is prime or not"<<endl;
+        cout<<"1. Check the number is armstrong or not"<<endl;
+        cout<<"2. Check the number is palindrome or not"<<endl;
+        cout<<"3. Check the string is palindrome or not"<<endl;
+        cout<<"4. Check the number is prime or not"<<endl;
         cout<<"5. Print the factorial of a number"<<endl;
         cout<<"6. Print the fibonacci series upto n"<<endl;
         cout<<"7. Print the sum of digits of a number"<<endl;
