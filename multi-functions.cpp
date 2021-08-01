@@ -195,7 +195,7 @@ int main() {
         string str;
 
         int start = 1;
-        int end = 4;
+        int end = 7;
 
         switch (choice)
         {
