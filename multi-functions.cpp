@@ -127,6 +127,7 @@ class Functions {
 
     }
 
+    // prints fibonacci series upto n
     void printFibonacci(int n) {
 
         int n1 = 0, n2 = 1, n3;
@@ -142,6 +143,21 @@ class Functions {
             n2 = n3;
         }
         cout<<endl;
+    }
+
+    // prints the sum of digits of n
+    void printSumOfDigits(int n) {
+
+        int sum = 0, temp = n, rem;
+
+        while(temp > 0) {
+            rem = temp % 10;
+            sum += rem;
+            temp /= 10;
+        }
+
+        cout<<"\nThe sum of digits of "<<n<<" is -> "<<sum<<endl;
+
     }
 
 };
@@ -165,6 +181,7 @@ int main() {
         cout<<"4. Check your number is prime or not"<<endl;
         cout<<"5. Print the factorial of a number"<<endl;
         cout<<"6. Print the fibonacci series upto n"<<endl;
+        cout<<"7. Print the sum of digits of a number"<<endl;
 
 
         cout<<endl;
@@ -240,6 +257,15 @@ int main() {
             cout<<endl;
 
             f.printFibonacci(number);
+
+            break;
+
+        case 7:
+
+            cout<<"Enter the number -> ";
+            cin>>number;
+
+            f.printSumOfDigits(number);
 
             break;
 
