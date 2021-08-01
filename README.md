@@ -1,4 +1,4 @@
-# multi-functions
+# Multi-Functions
 
 ----------------------- Functions -----------------------
 
