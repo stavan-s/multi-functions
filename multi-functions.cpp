@@ -90,6 +90,33 @@ class Functions {
 
     }
 
+    // prints whether the provided number is prime or not
+    void isPrime(int n) {
+
+        if(n == 0 || n == 1)
+            cout<<n<<" is not prime"<<endl;
+        else if(n == 2)
+            cout<<n<<" is prime"<<endl;
+        else if(n % 2 == 0)
+            cout<<n<<" is not prime"<<endl;
+        else {
+            bool is_prime = true;
+
+            for(int i = 2; i< n/2; i++) {
+                if(n % i == 0) {
+                    is_prime = false;
+                    break;
+                }
+            }
+
+            if(is_prime)
+                cout<<n<<" is prime"<<endl;
+            else
+                cout<<n<<" is not prime"<<endl;
+        
+        }  
+    }
+
 };
 
 int main() {
@@ -108,6 +135,7 @@ int main() {
         cout<<"1. Check your number is armstrong or not"<<endl;
         cout<<"2. Check your number is palindrome or not"<<endl;
         cout<<"3. Check your string is palindrome or not"<<endl;
+        cout<<"4. Check your number is prime or not"<<endl;
 
         cout<<endl;
 
@@ -118,6 +146,9 @@ int main() {
 
         int number;
         string str;
+
+        int start = 1;
+        int end = 4;
 
         switch (choice)
         {
@@ -152,14 +183,26 @@ int main() {
 
             break;
 
+        case 4:
+
+            cout<<"Enter the number -> ";
+            cin>>number;
+            cout<<endl;
+
+            f.isPrime(number);
+
+            break;
+
         default:
+            cout<<"Enter value between "<<start<<" and "<<end<<endl;
             break;
         }
 
-        cout<<"\nDo you want to continue? Enter yer or no -> ";
+        cout<<"\nDo you want to continue? Enter yes or no -> ";
         cin>>terminate_check;
 
-        if(terminate_check == "yes" || terminate_check == "Yes" || terminate_check == "YES")
+        if(terminate_check == "yes" || terminate_check == "Yes" || 
+            terminate_check == "YES" || terminate_check == "y" || terminate_check == "Y")
             check = true;
         else
             check = false;
