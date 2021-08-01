@@ -280,9 +280,10 @@ int main() {
         if(terminate_check == "yes" || terminate_check == "Yes" || 
             terminate_check == "YES" || terminate_check == "y" || 
             terminate_check == "Y")
-
+            {
                 check = true;
-
+                system("cls");
+            }
         else
                 check = false;
 
