@@ -1,6 +1,6 @@
 # Multi-Functions
 
-##--------------- Functions ---------------
+## --------------- Functions ---------------
 
 Enter your choice:
 1. Check your number is armstrong or not
