@@ -117,6 +117,33 @@ class Functions {
         }  
     }
 
+    // recursive function to print the factorial of n
+    int printFactorial(int n) {
+
+        if(n == 0)
+            return 1;
+
+        return n * printFactorial(n-1);
+
+    }
+
+    void printFibonacci(int n) {
+
+        int n1 = 0, n2 = 1, n3;
+
+        cout<<"Here's your answer -> ";
+
+        cout<<n1<<" "<<n2<<" ";
+
+        for(int i = 2; i<n; i++) {
+            n3 = n1 + n2;
+            cout<<n3<<" ";
+            n1 = n2;
+            n2 = n3;
+        }
+        cout<<endl;
+    }
+
 };
 
 int main() {
@@ -136,6 +163,9 @@ int main() {
         cout<<"2. Check your number is palindrome or not"<<endl;
         cout<<"3. Check your string is palindrome or not"<<endl;
         cout<<"4. Check your number is prime or not"<<endl;
+        cout<<"5. Print the factorial of a number"<<endl;
+        cout<<"6. Print the fibonacci series upto n"<<endl;
+
 
         cout<<endl;
 
@@ -193,6 +223,26 @@ int main() {
 
             break;
 
+        case 5:
+
+            cout<<"Enter the value of n -> ";
+            cin>>number;
+            cout<<endl;
+
+            cout<<"The factorial of "<<number<<" is -> "<<f.printFactorial(number)<<endl;
+
+            break;
+
+        case 6:
+
+            cout<<"Enter the value of n -> ";
+            cin>>number;
+            cout<<endl;
+
+            f.printFibonacci(number);
+
+            break;
+
         default:
             cout<<"Enter value between "<<start<<" and "<<end<<endl;
             break;
@@ -202,10 +252,13 @@ int main() {
         cin>>terminate_check;
 
         if(terminate_check == "yes" || terminate_check == "Yes" || 
-            terminate_check == "YES" || terminate_check == "y" || terminate_check == "Y")
-            check = true;
+            terminate_check == "YES" || terminate_check == "y" || 
+            terminate_check == "Y")
+
+                check = true;
+
         else
-            check = false;
+                check = false;
 
         cout<<endl;
     }
